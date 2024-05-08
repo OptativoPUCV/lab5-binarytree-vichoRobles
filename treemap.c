@@ -94,7 +94,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
                     free(aux->pair->value);
                     aux->pair->value = value;
                     free(new->pair);
-                    free(pair);
+                    free(new);
                     break;
                 }
             }

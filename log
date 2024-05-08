@@ -239,3 +239,9 @@ treemap.c:120:21: error: ‘TreeMap’ has no member named ‘is_equal’
       |                     ^~
 Compilation failed
 edfa62b
+Wed 08 May 2024 02:14:12 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  15|4
+total_score: 25/70
+c219c97

@@ -100,7 +100,7 @@ TreeNode * minimum(TreeNode * x){
 void removeNode(TreeMap * tree, TreeNode* node) {
     TreeNode * aux = tree->root;
     TreeNode * parent = NULL;
-    while (aux != NULL)
+    while (aux != NULL && aux->pair->key != node->pair->key)
         {
             parent = aux;
             if (tree->lower_than(node->pair->key, aux->pair->key))
@@ -169,12 +169,8 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         removeNode(tree, succKey);
         aux->pair->key = succKey;
         aux->pair->value = succValue;
-        
-        
-        
+              
     }
-
-
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){

@@ -382,3 +382,9 @@ treemap.c:171:32: error: ‘succValue’ undeclared (first use in this function)
 treemap.c:171:32: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 bceac89
+Wed 08 May 2024 03:01:50 AM UTC: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  18|3
+total_score: 40/70
+c184ec8

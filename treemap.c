@@ -89,13 +89,12 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
                 }
                 else
                 {
+                    aux->pair->value = value;
                     free(new);
                     break;
                 }
             }
     }
-    
-
 }
 
 TreeNode * minimum(TreeNode * x){

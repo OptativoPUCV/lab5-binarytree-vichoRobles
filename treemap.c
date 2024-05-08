@@ -27,21 +27,21 @@ int is_equal(TreeMap* tree, void* key1, void* key2){
 
 
 TreeNode * createTreeNode(void* key, void * value) {
-    TreeNode * new = (TreeNode *)malloc(sizeof(TreeNode));
-    if (new == NULL) return NULL;
-    new->pair = (Pair *)malloc(sizeof(Pair));
-    new->pair->key = key;
-    new->pair->value = value;
-    new->parent = new->left = new->right = NULL;
-    return new;
+    TreeNode * newNode = (TreeNode *)malloc(sizeof(TreeNode));
+    if (newNode == NULL) return NULL;
+    newNode->pair = (Pair *)malloc(sizeof(Pair));
+    newNode->pair->key = key;
+    newNode->pair->value = value;
+    newNode->parent = newNode->left = newNode->right = NULL;
+    return newNode;
 }
 
 TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
-    TreeMap * new = (TreeMap *)malloc(sizeof(TreeMap));
-    new->root = NULL;
-    new->current = NULL;
-    new->lower_than = lower_than;
-    return new;
+    TreeMap * newNode = (TreeMap *)malloc(sizeof(TreeMap));
+    newNode->root = NULL;
+    newNode->current = NULL;
+    newNode->lower_than = lower_than;
+    return newNode;
 }
 
 
@@ -50,10 +50,11 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     {
         return;
     }
-    TreeNode * new = createTreeNode(key, value);
+    TreeNode * newNode = createTreeNode(key, value);
+    
     if (tree->root == NULL)
     {
-        tree->root = new;
+        tree->root = newNode;
     }
     else
     {
@@ -64,8 +65,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
                 {
                     if (aux->left == NULL)
                     {
-                        aux->left = new;
-                        new->parent = aux;
+                        aux->left = newNode;
+                        newNode->parent = aux;
                         break;
                     }
                     else
@@ -77,8 +78,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
                 {
                     if (aux->right == NULL)
                     {
-                        aux->right = new;
-                        new->parent = aux;
+                        aux->right = newNode;
+                        newNode->parent = aux;
                         break;
                     }
                     else
@@ -88,7 +89,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
                 }
                 else
                 {
-                    free(new);
+                    free(newNode);
                     break;
                 }
             }

@@ -159,6 +159,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
             {
                 tree->root = child;
             }
+            child->parent = parent;
             free(aux);
         }
         else

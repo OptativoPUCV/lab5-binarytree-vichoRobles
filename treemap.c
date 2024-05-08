@@ -159,6 +159,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         {
             tree->root = child;
         }
+        child->parent = parent;
         free(aux);
     }
     else
@@ -166,7 +167,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         TreeNode * successor = minimum(aux->right);
         void *succKey = successor->pair->key;
         void *succValue = successor->pair->value;
-        removeNode(tree, successor);
+        removeNode(tree, succKey);
         aux->pair->key = succKey;
         aux->pair->value = succValue;
               

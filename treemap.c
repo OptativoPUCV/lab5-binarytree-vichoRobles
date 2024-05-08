@@ -100,7 +100,7 @@ TreeNode * minimum(TreeNode * x){
 void removeNode(TreeMap * tree, TreeNode* node) {
         TreeNode * aux = tree->root;
         TreeNode * parent = NULL;
-        while (aux != NULL && aux->pair->key != node->pair->key)
+        while (aux != NULL && !is_equal(tree,aux->pair->key,node->pair->key))
             {
                 parent = aux;
                 if (tree->lower_than(node->pair->key, aux->pair->key))

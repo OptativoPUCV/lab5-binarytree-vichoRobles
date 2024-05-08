@@ -229,3 +229,13 @@ treemap.c:22:5: note: declared here
       |     ^~~~~~~~
 Compilation failed
 6c89334
+Wed 08 May 2024 02:13:55 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:120:21: error: ‘TreeMap’ has no member named ‘is_equal’
+  120 |             if (tree->is_equal(key, aux->pair->key))
+      |                     ^~
+Compilation failed
+edfa62b

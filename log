@@ -467,3 +467,14 @@ treemap.c:228:14: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 51ee3ff
+Fri 10 May 2024 02:27:00 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:228:12: error: returning ‘TreeNode *’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  228 |     return ub;
+      |            ^~
+cc1: all warnings being treated as errors
+Compilation failed
+433ea4d

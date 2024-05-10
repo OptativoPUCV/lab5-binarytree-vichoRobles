@@ -222,7 +222,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
             }
             else
             {
-                return aux;
+                return aux->pair;
             }
         }
     return ub->pair;
